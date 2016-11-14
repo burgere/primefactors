@@ -11,6 +11,20 @@ public class PrimeFactorsTest extends TestCase {
         assertEquals(list, PrimeFactors.generate(1));
     }
 
+    public void testFive() throws Exception {
+        List<Integer> list = new ArrayList<Integer>();
+        list.add(5);
+        assertEquals(list, PrimeFactors.generate(5));
+    }
+
+    public void testFifty() throws Exception {
+        List<Integer> list = new ArrayList<Integer>();
+        list.add(2);
+        list.add(5);
+        list.add(5);
+        assertEquals(list, PrimeFactors.generate(50));
+    }
+
     public void testSixty() throws Exception {
         List<Integer> list = new ArrayList<Integer>();
         list.add(2);

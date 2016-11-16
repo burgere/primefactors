@@ -33,4 +33,13 @@ public class PrimeFactorsTest extends TestCase {
         list.add(5);
         assertEquals(list, PrimeFactors.generate(60));
     }
+
+    public void testOneHundred() throws Exception {
+        List<Integer> list = new ArrayList<Integer>();
+        list.add(2);
+        list.add(2);
+        list.add(5);
+        list.add(5);
+        assertEquals(list, PrimeFactors.generate(100));
+    }
 }

@@ -1,4 +1,8 @@
-# primefactors
+# Prime Factors
+
+Kata time! 
+
+http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata
 
 Write an application that lists the prime factors of any given number.
 

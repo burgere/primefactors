@@ -6,14 +6,4 @@ public class PrimeFactors {
 
     }
 
-    public static List<Integer> generate(int number) {
-        List<Integer> list = new ArrayList<Integer>();
-        for (int i = 2; i <= number; i++) {
-            while (number % i == 0) {
-                list.add(i);
-                number = number / i;
-            }
-        }
-        return list;
-    }
 }

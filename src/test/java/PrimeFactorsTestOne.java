@@ -1,20 +1,27 @@
-import junit.framework.Test;
-import junit.framework.TestCase;
+import org.junit.Before;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PrimeFactorsTest extends TestCase {
-    public void testOne() throws Exception {
-        List<Integer> list = new ArrayList<Integer>();
-        list.add(1);
-        assertEquals(list, PrimeFactors.generate(1));
+import static org.junit.Assert.assertEquals;
+
+public class PrimeFactorsTestOne extends PrimeFactorsTestBase<PrimeFactorsImplOne>{
+    PrimeFactors primeFactors;
+
+    @Override
+    protected PrimeFactorsImplOne createInstance() {
+        return new PrimeFactorsImplOne();
+    }
+
+    @Before
+    public void setUp() {
+        primeFactors = createInstance();
     }
 
     public void testFive() throws Exception {
         List<Integer> list = new ArrayList<Integer>();
         list.add(5);
-        assertEquals(list, PrimeFactors.generate(5));
+        assertEquals(list, primeFactors.generate(5));
     }
 
     public void testFifty() throws Exception {
@@ -22,7 +29,7 @@ public class PrimeFactorsTest extends TestCase {
         list.add(2);
         list.add(5);
         list.add(5);
-        assertEquals(list, PrimeFactors.generate(50));
+        assertEquals(list, primeFactors.generate(50));
     }
 
     public void testSixty() throws Exception {
@@ -31,7 +38,7 @@ public class PrimeFactorsTest extends TestCase {
         list.add(2);
         list.add(3);
         list.add(5);
-        assertEquals(list, PrimeFactors.generate(60));
+        assertEquals(list, primeFactors.generate(60));
     }
 
     public void testOneHundred() throws Exception {
@@ -40,6 +47,6 @@ public class PrimeFactorsTest extends TestCase {
         list.add(2);
         list.add(5);
         list.add(5);
-        assertEquals(list, PrimeFactors.generate(100));
+        assertEquals(list, primeFactors.generate(100));
     }
 }
